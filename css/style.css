@@ -1,0 +1,150 @@
+html,
+body {
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #333333;
+}	
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+
+.navigation {
+	margin-bottom: 76px;
+}
+
+.logo {
+	width: 458px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 65px;
+}
+
+.intro {
+	width: 576px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 53px;
+	text-align: center;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.feature-1 {
+	width: 400px;
+	float: left;
+}
+
+.feature-illustrated-1 {
+	margin-bottom: 59px;
+}
+
+.services ul {
+	display: block;
+	width: 100%;
+	padding: 0;
+}
+
+.services li {
+	list-style: none;
+	text-align: center;
+	float: left;
+	width: 400px;
+	margin-bottom: 83px;
+}
+
+.feature-2 {
+	float: right;
+	width: 400px;
+}
+
+.features-list {
+	font-size: 0;
+	margin-bottom: 58px;
+}
+
+.features-list .feature {
+	font-size: 14px;
+	line-height: 21px;
+	width: 400px;
+	display: inline-block;
+}
+
+.feature-illustrated-2 {
+	margin-top: 85px;
+	margin-bottom: 50px;
+}
+
+.search {
+	width: 576px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer-index,
+.footer-page {
+	font-size: 0;
+	min-height: 120px;
+}
+
+.footer-index {
+	margin-top: -120px;
+	background-color: #f9f9f9;
+	opacity: 0.9;
+}
+
+.footer-link,
+.footer-social,
+.footer-copyright {
+	display: inline-block;
+	width: 400px;
+	font-size: 14px;
+	line-height: 21px;
+	vertical-align: middle;
+}
+
+.infrastructure {
+	float: left;
+	width: 180px;
+	margin-left: 73px;
+}
+
+.type {
+	float: left;
+	width: 180px;
+	margin-left: 73px;
+}
+
+.price {
+	float: right;
+	width: 328px;
+	margin-right: 73px;
+}
+
+.result {
+	min-height: 87;
+}
+
+.hotel {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 73px;
+	font-size: 0;
+}
+
+.hotel img,
+.hotel-description {
+	display: inline-block;
+	margin-right: 30px;
+	font-size: 14px;
+	line-height: 21px;
+}
