@@ -18,6 +18,13 @@ body {
 	margin-bottom: 76px;
 }
 
+.navigation ul {
+	list-style: none;
+	font-size: 14px;
+	line-height: 26px;
+	color: #000000;
+}
+
 .logo {
 	width: 458px;
 	margin-right: auto;
