@@ -489,7 +489,10 @@ body {
 	margin-left: 0;
 	padding-left: 40px;
 	cursor: pointer;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 .infrastructure input[type=checkbox] + label {
@@ -528,7 +531,10 @@ body {
 	margin-left: 0;
 	padding-left: 40px;
 	cursor: pointer;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 .type input[type=checkbox] + label {
@@ -578,7 +584,8 @@ body {
 	width: 2px;
 	height: 22px;
 	background-color: #ffffff;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 }
 
 .price-controls label {
@@ -630,7 +637,8 @@ body {
 	background: #ababab;
 	border: 8px solid #ffffff;
 	border-radius: 50%;
-	box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+	-webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+	        box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
 	cursor: pointer;
 }
 
@@ -939,7 +947,8 @@ body {
 	padding: 52px 57px;
 	color: #000000;
 	background-color: #ffffff;
-	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15); 
+	-webkit-box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+	        box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15); 
 }
 
 .search-form input[type="text"],
@@ -1025,7 +1034,8 @@ body {
 
 .adults-form input[type="text"],
 .children-form input[type="text"] {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	width: 114px;
 	padding: 5px 49px;
 }
