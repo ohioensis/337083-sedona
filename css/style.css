@@ -68,6 +68,12 @@ body {
 	color: #dadada;
 }
 
+.active a,
+.active a:hover {
+	color: #766357;
+	cursor: default;
+}
+
 .main-logo {
 	position: relative;
 	width: 1200px;
@@ -281,10 +287,6 @@ body {
 	line-height: 21px;
 }
 
-.footer-copyright img {
-	vertical-align: middle;
-}
-
 .footer-link {
 	font-size: 21px;
 	line-height: 26px;
@@ -302,6 +304,32 @@ body {
 .footer-copyright {
 	width: 200px;
 	padding: 35px 100px;
+}
+
+.footer-copyright span {
+	display: inline-block;
+	width: 75px;
+	margin-right: 5px;
+}
+
+.footer-copyright a {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	width: 113px;
+	height: 39px;
+	background: url("../img/html-sprite.png") no-repeat;
+	background-position: -50px -50px;
+}
+
+.footer-copyright a:hover {
+	background-position: -50px -189px;
+}
+
+.footer-copyright a:active {
+	background-position: -50px -328px;
 }
 
 .social-btn {
@@ -373,11 +401,76 @@ body {
 	margin-left: 73px;
 }
 
+.infrastructure input {
+	position: absolute;
+	left: -9999px;
+}
+
+.infrastructure label {
+	display: block;
+	margin: 12px;
+	margin-left: 0;
+	padding-left: 40px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.infrastructure input[type=checkbox] + label {
+	background-image: url("../img/icon-checkbox-none.png");
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+.infrastructure input[type=checkbox]:disabled + label {
+	background-image: url("../img/icon-checkbox-none-active.png");
+	cursor: default;
+}
+
+.infrastructure input[type=checkbox]:checked + label {
+	background-image: url("../img/icon-checkbox-checked.png");
+}
+
+.infrastructure input[type=checkbox]:checked:disabled + label {
+	background-image: url("../img/icon-checkbox-checked-active.png");
+}
 
 .type {
 	float: left;
 	width: 180px;
 	margin-left: 73px;
+}
+
+.type input {
+	position: absolute;
+	left: -9999px;
+}
+
+.type label {
+	display: block;
+	margin: 12px;
+	margin-left: 0;
+	padding-left: 40px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.type input[type=checkbox] + label {
+	background-image: url("../img/icon-checkbox-none.png");
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+.type input[type=checkbox]:disabled + label {
+	background-image: url("../img/icon-checkbox-none-active.png");
+	cursor: default;
+}
+
+.type input[type=checkbox]:checked + label {
+	background-image: url("../img/icon-checkbox-checked.png");
+}
+
+.type input[type=checkbox]:checked:disabled + label {
+	background-image: url("../img/icon-checkbox-checked-active.png");
 }
 
 .price {
@@ -386,13 +479,121 @@ body {
 	margin-right: 73px;
 }
 
+.price h2 {
+	margin-bottom: 10px;
+}
+
+.price-controls {
+	position: relative;
+	height: 32px;
+	margin-bottom: 20px;
+	font-size: 0;
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+}
+
+.price-controls::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 2px;
+	height: 22px;
+	background-color: #ffffff;
+	transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 34px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.price-controls .max-price,
+.price-controls .min-price {
+	width: 85px;
+	padding-left: 65px;
+}
+
+.price-controls input {
+	width: 50px;
+	margin: 0;
+	color: inherit;
+	font: inherit;
+	background: none;
+	border: none;
+	outline: none;
+}
+
+.range-controls {
+	position: relative;
+	margin-bottom: 32px;
+}
+
+.range-controls .scale {
+	width: 100%;
+	height: 2px;
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+	width: 80%;
+	height: 2px;
+	background: #ffffff;
+}
+
+.range-toggle {
+	position: absolute;
+	top: -9px;
+	width: 4px;
+	height: 4px;
+	background: #ababab;
+	border: 8px solid #ffffff;
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+	cursor: pointer;
+}
+
+.range-toggle:hover {
+	background: #1c4f80;
+}
+
+.range-toggle-min {
+	left: 0;
+}
+
+.range-toggle-max {
+	left: 80%;
+}
+
+.filter-btn {
+	display: block;
+	margin: 0 auto;
+	padding: 6px 35px;
+	font-size: 14px;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: #ffffff;
+	background: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+	outline: none;
+	cursor: pointer; 
+}
+
+.filter-btn:hover {
+	color: #000000;
+	background: #ffffff;
+}
+
 .result {
 	position: relative;
 	display: block;
 	padding-left: 73px;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	/*border-bottom: 1px solid #e5e5e5;*/
 }
 
 .result-found {
@@ -441,6 +642,15 @@ body {
 	border-bottom: 1px dotted #81b3d2;
 }
 
+.result-sort-list a:hover {
+	color: #81b3d2;
+}
+
+.result-sort-list a:active {
+	color: #000000;
+	border-bottom: none;
+}
+
 .result-sort-list .active {
 	color: #81b3d2;
 	border: none;
@@ -448,9 +658,45 @@ body {
 
 .result-sort-order {
 	position: absolute;
-	top: 50px; /*Подогнать по пиксель перфект когда будут картинки вместо*/
+	top: 60px; /*Подогнать по пиксель перфект когда будут картинки вместо*/
 	right: 0;
 }
+
+.result-sort-order a {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: top;
+	font-size: 0;
+	text-decoration: none;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 5px 10px 5px;
+	border-color: transparent transparent #cccccc transparent;
+}
+
+.result-sort-order a:last-child {
+	border-width: 10px 5px 0 5px;
+	border-color: #cccccc transparent transparent transparent;
+	margin-right: 0;
+}
+
+.result-sort-order a:hover {
+	border-color: transparent transparent #000000 transparent;
+}
+
+.result-sort-order a:active {
+	border-color: transparent transparent #81b3d2 transparent;
+}
+
+.result-sort-order a:hover:last-child {
+	border-color: #000000 transparent transparent transparent;
+}
+
+.result-sort-order a:active:last-child {
+	border-color: #81b3d2 transparent transparent transparent;
+}
+
 
 .hotel {
 	position: relative;
@@ -494,18 +740,20 @@ body {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
+}
+
+.hotel-description a {
+	text-decoration: none;
 	color: #000000;
 }
 
-/*.hotel::after {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 89px;
-	height: 17px;
-	background: #000000 url("../img/sprite-sedona-booking.png") no-repeat;
-	background-position: -48px -282px;
-} Неясно, как сделать псевдоэлемент со звездами, к чему он должен относиться*/ 
+.hotel-description a:hover {
+	color: #81b3d2;
+}
+
+.hotel-description a:active {
+	color: rgba(0, 0, 0, 0.3)
+}
 
 .hotel-description p {
 	font-size: 14px;
@@ -524,14 +772,61 @@ body {
 	padding-bottom: 2px; 
 }
 
+.hotel-description .btn:hover {
+	background-color: #604e43;
+	color: #ffffff;
+}
+
+.hotel-description .btn:active {
+	background-color: #503e33;
+	color: rgba(255, 255, 255, 0.3);
+}
+
 .hotel-description-left .btn {
 	background-color: #81b3d2;
 }
 
+.hotel-description-left .btn:hover {
+	background-color: #669ec0;
+}
+
+.hotel-description-left .btn:active {
+	background-color: #5496bd;
+	color: rgba(255, 255, 255, 0.3);
+}
+
 .hotel .rating {
 	position: absolute;
+	min-width: 111px;
 	right: 0;
-	bottom: 20px;
+	top: 30px;
+	min-height: 90px;
+}
+
+.rating .star {
+	display: inline-block;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	width: 18px;
+	height: 17px;
+	margin-right: 5px;
+	background: transparent url("../img/star.png") no-repeat center;
+}
+
+.rating .star:last-child {
+	margin-right: 0;
+}
+
+.rating-stars {
+	position: absolute;
+	right: 0;
+}
+
+.rating .rating-rate {
+	position: absolute;
+	right: 0;
+	bottom: 0;
 	width: 110px;
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -542,6 +837,289 @@ body {
 	background-color: #f2f2f2;
 }
 
+.index-page {
+	position: relative;
+}
 
+/*Модальное окно поиска отелей*/
 
+.modal-content {
+	position: absolute;
+	bottom: 200px;
+	left: 50%;
+	margin-left: -288px; /*margin на половину ширины ВСЕГО элемента, с паддингами, если меняется, его тоже надо поменять*/
+	width: 456px;
+	padding: 55px 60px;
+	color: #000000;
+	background-color: #ffffff;
+	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15); 
+}
+
+.search-form input[type="text"],
+.search-form label {
+	font-size: 14px;
+	line-height: 26px;
+	font-family: "PT Sans", Arial, sans-serif;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+	margin: 0;
+	margin-bottom: 30px;
+}
+
+.search-form input[type="text"] {
+	background-color: #f2f2f2;
+	border: none;
+}
+
+.arrival-form {
+	position: relative;
+}
+
+.search-form .date {
+	width: 109px;
+	padding: 7px 8px;
+	padding-right: 220px;
+}
+
+.arrival-form label {
+	float: left;
+	width: 92px;
+	display: block;
+	margin-top: 10px;
+}
+
+.arrival-form input[type="text"] {
+	float: right;
+}
+
+.departure-form {
+	position: relative;
+}
+
+.departure-form label {
+	float: left;
+	width: 96px;
+	display: block;
+	margin-top: 10px;	
+}
+
+.departure-form input[type="text"] {
+	float: right;
+}
+
+.adults-form {
+	position: relative;
+	float: left;
+	width: 240px;
+	margin-bottom: 22px; /*Смотреть по пиксель перфект, надо ли увеличивать этот отступ или другие*/
+}
+
+.children-form {
+	position: relative;
+	float: right;
+	width: 182px;
+	margin-bottom: 22px;
+}
+
+.adults-form input[type="text"],
+.children-form input[type="text"] {
+	box-sizing: border-box;
+	width: 115px;
+	padding: 7px 50px;
+}
+
+.adults-form label,
+.children-form label {
+	vertical-align: middle;
+}
+
+.adults-form label {
+	margin-right: 44px;
+}
+
+.children-form label {
+	margin-right: 25px;
+}
+
+.search-form .search-btn {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 21px;
+	line-height: 26px;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #81b3d2;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 16px 180px;
+	margin: 0;
+	border: none;
+	outline: none;
+}
+
+.search-form .search-btn:hover {
+	background-color: #669ec0;
+}
+
+.search-form .search-btn:active {
+	background-color: #5496bd;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.search-form .btn-calendar {
+	position: absolute;
+	top: 9px;
+	right: 9px;
+	content: "";
+	width: 21px;
+	height: 22px;
+	font-size: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: transparent url("../img/sprite-sedona.png") no-repeat center;
+	background-position: -140px -734px;
+}
+
+.search-form .btn-calendar:hover {
+	background-position: -140px -836px;
+}
+
+.search-form .btn-calendar:active {
+	background-position: -140px -938px;
+}
+
+.adults-form .btn-minus {
+	position: absolute;
+	top: 18px;
+	left: 127px;
+	content: "";
+	width: 12px;
+	height: 3px;
+	font-size: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #a9a9a9;
+}
+
+.adults-form .btn-minus:hover {
+	background-color: #000000;
+}
+
+.adults-form .btn-minus:active {
+	background-color: #81b3d2;
+}
+
+.adults-form .btn-plus {
+	position: absolute;
+	top: 18px;
+	left: 212px;
+	content: "";
+	width: 12px;
+	height: 3px;
+	font-size: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #a9a9a9;
+}
+
+.adults-form .btn-plus:hover {
+	background-color: #000000;
+}
+
+.adults-form .btn-plus:active {
+	background-color: #81b3d2;
+}
+
+.adults-form .btn-plus::after {
+	position: absolute;
+	top: -4px;
+	left: 4px;
+	content: "";
+	width: 4px;
+	height: 13px;
+	font-size: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #a9a9a9;
+}
+
+.adults-form .btn-plus:hover::after {
+	background-color: #000000;
+}
+
+.adults-form .btn-plus:active::after {
+	background-color: #81b3d2;
+}
+
+.children-form .btn-minus {
+	position: absolute;
+	top: 18px;
+	left: 76px;
+	content: "";
+	width: 12px;
+	height: 3px;
+	font-size: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #a9a9a9;
+}
+
+.children-form .btn-minus:hover {
+	background-color: #000000;
+}
+
+.children-form .btn-minus:active {
+	background-color: #81b3d2;
+}
+
+.children-form .btn-plus {
+	position: absolute;
+	top: 18px;
+	left: 160px;
+	content: "";
+	width: 12px;
+	height: 3px;
+	font-size: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #a9a9a9;
+}
+
+.children-form .btn-plus:hover {
+	background-color: #000000;
+}
+
+.children-form .btn-plus:active {
+	background-color: #81b3d2;
+}
+
+.children-form .btn-plus::after {
+	position: absolute;
+	top: -4px;
+	left: 4px;
+	content: "";
+	width: 4px;
+	height: 13px;
+	font-size: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #a9a9a9;
+}
+
+.children-form .btn-plus:hover::after {
+	background-color: #000000;
+}
+
+.children-form .btn-plus:active::after {
+	background-color: #81b3d2;
 }
