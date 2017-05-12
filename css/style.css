@@ -1,9 +1,9 @@
 html,
 body {
 	min-width: 1200px;
-	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 21px;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
 	color: #333333;
@@ -16,48 +16,53 @@ body {
 
 .navigation {
 	position: relative;
-	background-color: #ffffff;
-	color: #000000;
-	max-height: 60px;
 	z-index: 1;
+	/*max-height: 60px;*/
+	color: #000000;
+	background-color: #ffffff;	
 }
 
 .navigation ul {
 	margin: 0;
 	padding: 0;
-	list-style: none;
 	font-size: 0;
+	list-style: none;
+
 }
 
 .navigation li {
 	display: block;
 	float: left;
 	width: auto;
+	vertical-align: top;
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
-	vertical-align: top;
 }
 
 .navigation li:nth-child(2) {
-	margin-right: 88px; /*Придется подогнать по пиксель перфект*/
+	margin-right: 96px;
 }
-
 
 .navigation a {
 	display: block;
-	padding: 22px 73px;
+	padding: 17px 73px;
+	padding-bottom: 14px;
 	color: #000000;
 	text-decoration: none;
+}
+
+.navigation .nav-hotel {
+	margin-left: 16px;
 }
 
 .navigation img {
 	position: absolute;
 	top: 0;	
 	left: 531px;
+	z-index: 2;
 	width: 138px;
 	height: 70px;
-	z-index: 2;
 }
 
 .navigation a:hover {
@@ -77,11 +82,11 @@ body {
 .main-logo {
 	position: relative;
 	width: 1200px;
-	height: 508px;
+	height: 430px;
 	padding-top: 77px;
-	margin-bottom: 65px;
+	margin-bottom: 63px;
 	background: #81b3d2 url("../img/background-photo.jpg") no-repeat center top;
-	background-position: 0 -60px; /*Менять здесь на столько, какой высоты шапка*/
+	background-position: 0 -57px; /*Менять здесь на столько, какой высоты шапка*/
 }
 
 .logo {
@@ -92,7 +97,7 @@ body {
 
 .main-logo::after {
 	position: absolute;
-	bottom:0;
+	bottom: 0;
 	content: "";
 	width: 1200px;
 	height: 57px;
@@ -110,11 +115,11 @@ body {
 
 .intro b {
 	display: block;
+	margin-bottom: 28px;
 	font-size: 21px;
 	line-height: 26px;
-	color: #000000;
 	font-weight: bold;
-	margin-bottom: 30px;
+	color: #000000;
 }
 
 .clearfix::after {
@@ -127,11 +132,28 @@ body {
 .feature-2 {
 	width: 308px;
 	padding: 46px;
-	padding-top: 58px;
-	padding-bottom: 59px;
-	background-color: #81b3d2;
+	padding-top: 38px;
+	padding-bottom: 31px;
 	color: #ffffff;
+	background-color: #81b3d2;
 }
+
+.feature-1 h2 {
+	display: block;
+	width: 130px;
+	margin: 0;
+	padding: 0;
+	padding-left: 88px;
+	padding-top: 18px;
+	padding-bottom: 10px;
+}
+
+.feature-1 p {
+	display: block;
+	margin-bottom: 20px;
+}
+
+/*С помощью псевдоэлементов нужно сделать чёрточки около номеров 1, 2, 3, 4, 5*/
 
 .feature-1 {
 	float: left;
@@ -141,9 +163,22 @@ body {
 	float: right;
 }
 
+.feature-2 h2 {
+	width: 156px;
+	margin: 0;
+	padding: 0;
+	padding-left: 76px;
+	padding-top: 18px;
+	padding-bottom: 10px;
+}
+
+.feature-2 p {
+	display: block;
+	margin-bottom: 20px;
+}
+
 .feature {
 	text-align: center;
-	padding-top: 50px;
 }
 
 .feature h2 {
@@ -153,7 +188,7 @@ body {
 }
 
 .feature-illustrated-1 {
-	margin-bottom: 59px;
+	margin-bottom: 56px;
 }
 
 .services ul {
@@ -169,40 +204,55 @@ body {
 	text-align: center;
 	float: left;
 	width: 280px;
-	padding: 60px;
-	padding-top: 105px;
-	margin-bottom: 25px; /*Подогнать по пиксель перфект*/
+	padding: 58px;
+	padding-top: 83px;
+	margin-bottom: 10px; /*Подогнать по пиксель перфект*/
 
 }
 
-.services li::before {
-	position: absolute;
-	content: "";
-	width: 75px;
-	height: 72px;
-	top: 0;
-	left: 162px; 
-	background-color: #81b3d2;
-	
+.services .food {
+	width: 292px;
 }
 
 .services li:first-child::before {
+	position: absolute;
+	top: 0;
+	left: 162px; 
+	content: "";
+	width: 75px;
+	height: 72px;
+	background-color: #81b3d2;
 	background: transparent url("../img/sprite-sedona.png") no-repeat;
-	background-position: -140px -1445px; 
+	background-position: -140px -1446px; 
 }
 
 .services li:nth-child(2)::before {
+	position: absolute;
+	top: 0;
+	left: 166px; 
+	content: "";
+	background-color: #81b3d2;
 	width: 74px;
 	height: 70px;
 	background: transparent url("../img/sprite-sedona.png") no-repeat;
-	background-position: -140px -1139px; 
+	background-position: -140px -1140px; 
 }
 
 .services li:last-child::before {
+	position: absolute;
+	top: -4px;
+	left: 158px; 
+	content: "";
+	background-color: #81b3d2;
 	width: 69px;
 	height: 76px;
 	background: transparent url("../img/sprite-sedona.png") no-repeat;
-	background-position: -135px -1290px; 
+	background-position: -134px -1290px; 
+}
+
+.services h2 {
+	display: block;
+	margin-bottom: 23px;
 }
 
 .feature-illustrated-2 {
@@ -211,37 +261,52 @@ body {
 }
 
 .features-list {
-	margin: 0;
+	margin-top: -6px;
 	margin-bottom: 58px;
 	padding: 0;
 	font-size: 0;
 }
 
 .features-list .feature {
+	display: inline-block;
+	vertical-align: top;
+	width: 280px;
+	padding-top: 30px;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-bottom: 39px;
 	font-size: 14px;
 	line-height: 21px;
-	width: 260px;
-	display: inline-block;
-	padding-left: 70px;
-	padding-right: 70px;
-	padding-bottom: 60px;
 	background-color: #eeeeee;
 }
 
+.features-list h2 {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 23px;
+	max-width: 120px;
+}
+
+.features-list p {
+	display: block;
+	margin-bottom: 20px;
+}
+
 .search {
-	width: 576px;
+	width: 568px;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
 	padding: 0 70px;
+	text-align: center;
 }
 
 .search b {
+	display: block;
+	margin-bottom: 27px;
 	font-size: 30px;
 	line-height: 30px;
 	font-weight: bold;
-	display: block;
-	margin-bottom: 32px;
 }
 
 .btn {
@@ -253,11 +318,11 @@ body {
 }
 
 .search .btn {
-	font-size: 21px;
-	line-height: 26px;
-	padding: 30px 140px;
+	padding: 30px 120px;
 	margin: 0;
 	margin-top: 50px;
+	font-size: 21px;
+	line-height: 26px;
 }
 
 .map img {
@@ -267,12 +332,12 @@ body {
 
 .footer-index,
 .footer-page {
-	font-size: 0;
 	min-height: 120px;
+	font-size: 0;
 }
 
 .footer-index {
-	margin-top: -120px;
+	margin-top: -127px;
 	background-color: #f9f9f9;
 	opacity: 0.9;
 	vertical-align: middle;
@@ -288,38 +353,40 @@ body {
 }
 
 .footer-link {
+	width: 140px;
+	padding: 28px 131px; 
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
 	color: #000000;
-	width: 140px;
-	padding: 35px 130px; 
 }
 
 .footer-social {
 	width: 160px;
-	padding: 35px 120px;
+	padding: 33px 120px;
+	padding-right: 130px;
 }
 
 .footer-copyright {
 	width: 200px;
-	padding: 35px 100px;
+	padding: 35px 90px;
 }
 
 .footer-copyright span {
 	display: inline-block;
+	vertical-align: middle;
 	width: 75px;
 	margin-right: 5px;
 }
 
 .footer-copyright a {
 	display: inline-block;
-	vertical-align: middle;
-	font-size: 0;
-	margin: 0;
-	padding: 0;
 	width: 113px;
 	height: 39px;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	font-size: 0;
 	background: url("../img/html-sprite.png") no-repeat;
 	background-position: -50px -50px;
 }
@@ -375,15 +442,20 @@ body {
 	background-position: -37px -269px;
 }
 
+/*Стилизация страницы бронирования гостиниц*/
+
 .filter {
-	min-height: 218px;
-	color: #ffffff;
+	padding-bottom: 0;
+	padding-top: 15px;
+	margin-bottom: 0;
 	font-size: 16px;
 	line-height: 21px;
+	color: #ffffff;
 	background: #4b7ea9 url("../img/background-filtered.jpg") no-repeat center top;
 }
 
 .filter h2 {
+	margin-bottom: 25px;
 	font-size: 16px;
 	line-height: 21px;
 	font-weight: bold;
@@ -393,6 +465,11 @@ body {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+
+.filter li {
+	display: block;
+	margin-bottom: 25px;
 }
 
 .infrastructure {
@@ -475,12 +552,13 @@ body {
 
 .price {
 	float: right;
-	width: 328px;
+	width: 318px;
 	margin-right: 73px;
 }
 
 .price h2 {
-	margin-bottom: 10px;
+	margin-left: -10px;
+	margin-bottom: 8px;
 }
 
 .price-controls {
@@ -493,10 +571,10 @@ body {
 }
 
 .price-controls::after {
-	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	content: "";
 	width: 2px;
 	height: 22px;
 	background-color: #ffffff;
@@ -571,7 +649,8 @@ body {
 .filter-btn {
 	display: block;
 	margin: 0 auto;
-	padding: 6px 35px;
+	margin-bottom: 32px;
+	padding: 6px 28px;
 	font-size: 14px;
 	line-height: 21px;
 	text-transform: uppercase;
@@ -591,24 +670,26 @@ body {
 .result {
 	position: relative;
 	display: block;
+	padding: 0;
+	margin: 0;
+	padding-top: 11px;
+	padding-bottom: 9px;
 	padding-left: 73px;
-	padding-top: 30px;
-	padding-bottom: 30px;
 }
 
 .result-found {
 	display: inline-block;
+	margin-right: 45px;
 	vertical-align: middle;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
 	color: #000000;
-	margin-right: 45px;
 }
 
 .result-sort {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: baseline;
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: normal; 
@@ -616,11 +697,11 @@ body {
 
 .result-sort-list h3 {
 	display: inline-block;
+	margin-right: 0;
 	vertical-align: middle;
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: normal;
-	margin-right: 40px;
 }
 
 .result-sort-list ul {
@@ -658,27 +739,27 @@ body {
 
 .result-sort-order {
 	position: absolute;
-	top: 60px; /*Подогнать по пиксель перфект когда будут картинки вместо*/
-	right: 0;
+	top: 40px; /*Подогнать по пиксель перфект когда будут картинки вместо*/
+	right: 72px;
 }
 
 .result-sort-order a {
 	display: inline-block;
+	width: 0;
+	height: 0;
 	margin-right: 10px;
 	vertical-align: top;
 	font-size: 0;
 	text-decoration: none;
-	width: 0;
-	height: 0;
 	border-style: solid;
 	border-width: 0 5px 10px 5px;
 	border-color: transparent transparent #cccccc transparent;
 }
 
 .result-sort-order a:last-child {
-	border-width: 10px 5px 0 5px;
-	border-color: #cccccc transparent transparent transparent;
 	margin-right: 0;
+	border-width: 10px 5px 0 5px;
+	border-color: #81b3d2 transparent transparent transparent;
 }
 
 .result-sort-order a:hover {
@@ -697,21 +778,25 @@ body {
 	border-color: #81b3d2 transparent transparent transparent;
 }
 
-
 .hotel {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 0;
+	font-size: 0;
 	position: relative;
-	padding-top: 30px;
+	padding-top: 29px;
 	padding-left: 73px;
 	border-top: 1px solid #e5e5e5;
+}
+
+.hotel:last-child {
+	border-bottom: 1px solid #e5e5e5;
 }
 
 .hotel img,
 .hotel-description {
 	display: inline-block;
 	vertical-align: top;
-	padding: 0;
-	margin: 0;
-	font-size: 0;
 	margin-right: 30px;
 	margin-bottom: 30px;
 
@@ -737,8 +822,9 @@ body {
 	display: block;
 	margin: 0;
 	padding: 0;
+	margin-bottom: -6px;
 	font-size: 21px;
-	line-height: 26px;
+	line-height: 21px;
 	font-weight: bold;
 }
 
@@ -763,13 +849,13 @@ body {
 
 .hotel-description .btn {
 	display: block;
+	padding-top: 2px;
+	padding-bottom: 2px; 
 	text-decoration: none;
 	text-align: center;
 	font-size: 14px;
 	line-height: 21px;
 	color: #ffffff;
-	padding-top: 2px;
-	padding-bottom: 2px; 
 }
 
 .hotel-description .btn:hover {
@@ -797,20 +883,21 @@ body {
 
 .hotel .rating {
 	position: absolute;
+	right: 70px;
+	top: 28px;
 	min-width: 111px;
-	right: 0;
-	top: 30px;
 	min-height: 90px;
 }
 
 .rating .star {
 	display: inline-block;
-	font-size: 0;
-	margin: 0;
-	padding: 0;
+	vertical-align: top;
 	width: 18px;
 	height: 17px;
-	margin-right: 5px;
+	margin: 0;
+	padding: 0;
+	margin-right: 6px;
+	font-size: 0;
 	background: transparent url("../img/star.png") no-repeat center;
 }
 
@@ -825,8 +912,8 @@ body {
 
 .rating .rating-rate {
 	position: absolute;
-	right: 0;
-	bottom: 0;
+	right: 2px;
+	bottom: -15px;
 	width: 110px;
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -845,11 +932,11 @@ body {
 
 .modal-content {
 	position: absolute;
-	bottom: 200px;
+	bottom: 208px;
 	left: 50%;
-	margin-left: -288px; /*margin на половину ширины ВСЕГО элемента, с паддингами, если меняется, его тоже надо поменять*/
-	width: 456px;
-	padding: 55px 60px;
+	width: 455px;
+	margin-left: -285px; /*margin на половину ширины ВСЕГО элемента, с паддингами, если меняется, его тоже надо поменять*/
+	padding: 52px 57px;
 	color: #000000;
 	background-color: #ffffff;
 	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15); 
@@ -857,19 +944,29 @@ body {
 
 .search-form input[type="text"],
 .search-form label {
+	margin: 0;
+	margin-bottom: 30px;
 	font-size: 14px;
 	line-height: 26px;
 	font-family: "PT Sans", Arial, sans-serif;
 	font-weight: bold;
 	color: #000000;
 	text-transform: uppercase;
-	margin: 0;
-	margin-bottom: 30px;
 }
 
 .search-form input[type="text"] {
 	background-color: #f2f2f2;
-	border: none;
+	border: 2px solid #f2f2f2;
+}
+
+.search-form input[type="text"]:hover {
+	background-color: #ebebeb;
+	border: 2px solid #ebebeb;
+}
+
+.search-form input[type="text"]:focus {
+	background-color: #ffffff;
+	border: 2px solid #e5e5e5;
 }
 
 .arrival-form {
@@ -878,14 +975,16 @@ body {
 
 .search-form .date {
 	width: 109px;
-	padding: 7px 8px;
-	padding-right: 220px;
+	padding-left: 11px;
+	padding-top: 6px;
+	padding-bottom: 2px;
+	padding-right: 218px;
 }
 
 .arrival-form label {
+	display: block;
 	float: left;
 	width: 92px;
-	display: block;
 	margin-top: 10px;
 }
 
@@ -898,9 +997,9 @@ body {
 }
 
 .departure-form label {
+	display: block;
 	float: left;
 	width: 96px;
-	display: block;
 	margin-top: 10px;	
 }
 
@@ -912,6 +1011,7 @@ body {
 	position: relative;
 	float: left;
 	width: 240px;
+	margin-right: 35px;
 	margin-bottom: 22px; /*Смотреть по пиксель перфект, надо ли увеличивать этот отступ или другие*/
 }
 
@@ -919,14 +1019,19 @@ body {
 	position: relative;
 	float: right;
 	width: 182px;
+	margin-right: -4px;
 	margin-bottom: 22px;
 }
 
 .adults-form input[type="text"],
 .children-form input[type="text"] {
 	box-sizing: border-box;
-	width: 115px;
-	padding: 7px 50px;
+	width: 114px;
+	padding: 5px 49px;
+}
+
+.children-form input[type="text"] {
+	padding: 5px 51px;
 }
 
 .adults-form label,
@@ -935,16 +1040,18 @@ body {
 }
 
 .adults-form label {
-	margin-right: 44px;
+	margin-right: 37px;
 }
 
 .children-form label {
-	margin-right: 25px;
+	margin-right: 23px;
 }
 
 .search-form .search-btn {
 	display: block;
 	width: 100%;
+	padding: 16px 180px;
+	margin: 0;
 	text-align: center;
 	font-size: 21px;
 	line-height: 26px;
@@ -954,8 +1061,6 @@ body {
 	background-color: #81b3d2;
 	text-transform: uppercase;
 	cursor: pointer;
-	padding: 16px 180px;
-	margin: 0;
 	border: none;
 	outline: none;
 }
@@ -995,7 +1100,7 @@ body {
 .adults-form .btn-minus {
 	position: absolute;
 	top: 18px;
-	left: 127px;
+	left: 124px;
 	content: "";
 	width: 12px;
 	height: 3px;
@@ -1017,7 +1122,7 @@ body {
 .adults-form .btn-plus {
 	position: absolute;
 	top: 18px;
-	left: 212px;
+	left: 201px;
 	content: "";
 	width: 12px;
 	height: 3px;
@@ -1061,7 +1166,7 @@ body {
 .children-form .btn-minus {
 	position: absolute;
 	top: 18px;
-	left: 76px;
+	left: 79px;
 	content: "";
 	width: 12px;
 	height: 3px;
@@ -1083,7 +1188,7 @@ body {
 .children-form .btn-plus {
 	position: absolute;
 	top: 18px;
-	left: 160px;
+	left: 156px;
 	content: "";
 	width: 12px;
 	height: 3px;
