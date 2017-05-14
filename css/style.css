@@ -7,11 +7,15 @@ body {
 	font-weight: normal;
 	text-transform: uppercase;
 	color: #333333;
-}	
+	background-color: #f2f2f2;
+}
 
 .container {
 	width: 1200px;
 	margin: 0 auto;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .navigation {
@@ -153,6 +157,32 @@ body {
 	margin-bottom: 20px;
 }
 
+.feature .number {
+	position: relative;
+}
+
+.feature-1 .number::before,
+.feature-2 .number::before {
+	position: absolute;
+	top: 8px;
+	left: 130px;
+	content: "";
+	width: 9px;
+	height: 2px;
+	background-color: #ffffff;
+}
+
+.feature-1 .number::after,
+.feature-2 .number::after {
+	position: absolute;
+	top: 8px;
+	left: 169px;
+	content: "";
+	width: 9px;
+	height: 2px;
+	background-color: #ffffff;
+}
+
 /*С помощью псевдоэлементов нужно сделать чёрточки около номеров 1, 2, 3, 4, 5*/
 
 .feature-1 {
@@ -206,8 +236,7 @@ body {
 	width: 280px;
 	padding: 58px;
 	padding-top: 83px;
-	margin-bottom: 10px; /*Подогнать по пиксель перфект*/
-
+	margin-bottom: 10px;
 }
 
 .services .food {
@@ -258,10 +287,10 @@ body {
 .feature-illustrated-2 {
 	margin: 0;
 	padding: 0;
+	margin-bottom: -6px;
 }
 
 .features-list {
-	margin-top: -6px;
 	margin-bottom: 58px;
 	padding: 0;
 	font-size: 0;
@@ -291,6 +320,30 @@ body {
 .features-list p {
 	display: block;
 	margin-bottom: 20px;
+}
+
+.features-list .number {
+	position: relative;
+}
+
+.features-list .number::before {
+	position: absolute;
+	top: 10px;
+	left: 115px;
+	content: "";
+	width: 9px;
+	height: 2px;
+	background-color: #333333;
+}
+
+.features-list .number::after {
+	position: absolute;
+	top: 10px;
+	left: 155px;
+	content: "";
+	width: 9px;
+	height: 2px;
+	background-color: #333333;
 }
 
 .search {
@@ -563,7 +616,7 @@ body {
 }
 
 .price h2 {
-	margin-left: -10px;
+	margin-left: -7px;
 	margin-bottom: 8px;
 }
 
@@ -656,11 +709,12 @@ body {
 
 .filter-btn {
 	display: block;
-	margin: 0 auto;
+	margin-left: 86px;
 	margin-bottom: 32px;
 	padding: 6px 28px;
 	font-size: 14px;
 	line-height: 21px;
+	font-weight: normal;
 	text-transform: uppercase;
 	color: #ffffff;
 	background: transparent;
@@ -747,7 +801,7 @@ body {
 
 .result-sort-order {
 	position: absolute;
-	top: 40px; /*Подогнать по пиксель перфект когда будут картинки вместо*/
+	top: 40px;
 	right: 72px;
 }
 
@@ -817,7 +871,7 @@ body {
 	min-width: 110px;
 	margin: 0;
 	padding: 0;
-	margin-right: 5px; /*Возможно придется использовать отрицательные маргины чтобы высота текста была равна высоте картинки*/
+	margin-right: 5px; 
 	font-size: 0;
 }
 
@@ -942,13 +996,18 @@ body {
 	position: absolute;
 	bottom: 208px;
 	left: 50%;
+	display: none;
 	width: 455px;
 	margin-left: -285px; /*margin на половину ширины ВСЕГО элемента, с паддингами, если меняется, его тоже надо поменять*/
-	padding: 52px 57px;
+	padding: 53px 57px;
 	color: #000000;
 	background-color: #ffffff;
 	-webkit-box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 	        box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15); 
+}
+
+.modal-content-show {
+	display: block;
 }
 
 .search-form input[type="text"],
@@ -1021,7 +1080,7 @@ body {
 	float: left;
 	width: 240px;
 	margin-right: 35px;
-	margin-bottom: 22px; /*Смотреть по пиксель перфект, надо ли увеличивать этот отступ или другие*/
+	margin-bottom: 22px; 
 }
 
 .children-form {
